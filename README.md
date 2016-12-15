@@ -8,6 +8,7 @@ The genetic algorithm process based on :
 - initialization;
 - fitness function;
 - production process (selection, crossover, mutation).
+
 the variable declared are :
 - the number of iteration;
 - Crossover rate;
