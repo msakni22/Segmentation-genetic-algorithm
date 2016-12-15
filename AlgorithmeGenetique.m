@@ -3,14 +3,14 @@ clc; clear all;
 Image = imread('img.jpeg');
 Image = rgb2gray(Image);
 %Initialisation :
-%probabilités de croisement et mutation
+%probabilitÃ©s de croisement et mutation
 Crossover_Prob = 0.5;
 Mutation_Prob = 0.5;
 mutation_amp = rand();
 if ((Mutation_Prob + Crossover_Prob)~=1) 
-    error('La somme des probabilités doit être égale à 1!');
+    error('La somme des probabilitÃ©s doit Ãªtre Ã©gale Ã  1!');
 end
-%nombre des itérations et la taille de fenêtre
+%nombre des itÃ©rations et la taille de fenÃªtre
 Nbr_iteration = 20;
 windowArea = 3;
 [x,y] = size(Image);
@@ -19,7 +19,7 @@ y = y-(2*fix(windowArea/2));
 population = repmat(Unite(1,windowArea),[x,y]);
 newGeneration = repmat(Unite(1,windowArea),[x,y]);
 %Initialisation de la population
-disp('Algorithme génétique : Relaxation sélectionniste');
+disp('Algorithme gÃ©nÃ©tique : Relaxation sÃ©lectionniste');
 Label =1;
 disp('Initialisation de population en cours...');
 for i=1:x
@@ -28,7 +28,7 @@ for i=1:x
         Label = Label +1;
     end;
 end;
-%Déclencher le cycle d'itération
+%DÃ©clencher le cycle d'itÃ©ration
 for z=1:Nbr_iteration
 %Fitness
 fprintf('Generation %d \n',z);
@@ -47,9 +47,9 @@ for i=1:x
     end;
 end
 population = newGeneration;
-%Elimination des unités externes
-%à verifier
-%disp('Elimination des unités externes en cours...');
+%Elimination des unitÃ©s externes
+%Ã  verifier
+%disp('Elimination des unitÃ©s externes en cours...');
 %for i=1:x
 %    for j=1:y
 %       [k l m n]=Intervalle(i,j,x,y);
@@ -89,7 +89,7 @@ m = ones(x,y);
       end; 
     end
      img = mat2gray(m, [0 255]);
-     imwrite(img,sprintf('res/generation %d.jpg',z));
+     imwrite(img,sprintf('generation %d.jpg',z));
 end
 
 disp('finis');
