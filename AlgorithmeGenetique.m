@@ -1,6 +1,6 @@
 clc; clear all;
 %Lecture d'image et la convertir en niveau gris
-Image = imread('img\img.jpeg');
+Image = imread('img.jpeg');
 Image = rgb2gray(Image);
 %Initialisation :
 %probabilités de croisement et mutation
