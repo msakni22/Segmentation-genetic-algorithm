@@ -1,7 +1,8 @@
 # Seg-GA
 Genetic algorithm applied to image segmentation 
-AlgorithmeGenetique.m (is the main script)
 ------------------------------------------------
+AlgorithmeGenetique.m (is the main script)
+
 This work is based on Philippe Andrey's article : selectionist relaxation: genetic algorithms applied to image segmentation published in Image and Vision Computing 17 (1999) pages 175-187.
 The genetic algorithm process based on : 
 - initialization;
